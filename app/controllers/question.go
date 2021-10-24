@@ -12,7 +12,7 @@ type QuestionResult struct {
 }
 
 func GetQuestions(c *fiber.Ctx) error {
-	db, err := database.DbCon(utils.GetDsn(&utils.JungaiTest))
+	db, err := database.DbCon(utils.GetDsn(utils.JungaiTest))
 
 	if err != nil {
 		return fiber.ErrInternalServerError

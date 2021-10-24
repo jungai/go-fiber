@@ -16,6 +16,6 @@ var JungaiTest ConfigDb = ConfigDb{
 	dbname:   "jungai_test",
 }
 
-func GetDsn(c *ConfigDb) string {
+func GetDsn(c ConfigDb) string {
 	return fmt.Sprintf("%s:%s@tcp(%s)/%s", c.user, c.password, c.hostname, c.dbname)
 }
